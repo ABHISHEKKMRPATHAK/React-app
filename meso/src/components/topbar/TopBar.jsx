@@ -7,7 +7,7 @@ function TopBar() {
      <div className="topBar-left"></div>
      <div className="topbar-right"></div>
      <div className="topbar-center"></div>
-
+     <div className="topbar-center"></div>
     </div>
   )
 }
