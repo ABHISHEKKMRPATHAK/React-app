@@ -1,0 +1,22 @@
+.container{
+    background-color: tomato;
+    margin: 50px 50px 50px;
+    align-items: center;
+    flex-direction: row;
+}
+.accord-title{
+display: flex;
+justify-content: space-between;
+color:aliceblue;
+text-align: center;
+}
+.active{
+    display: none;
+}
+button{
+    padding: 5px 5px 5px;
+    margin: 7px;
+    border: 2px solid ;
+    background-color: rgb(229, 229, 12);
+    border-radius: 6px;
+}
