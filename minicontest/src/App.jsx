@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import UserContextProvider from './context/UserContextProvider'
-import './App.css'
+import {Routes,Route} from 'react-router-dom'
+import Navbar from './components/Navbar'
 import Profile from './components/Profile'
-import Login from './components/Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,9 +10,10 @@ function App() {
   return (
     <>
     <UserContextProvider>
-    <h1>IMP</h1>
-    <Login />
-    <Profile />
+  <Routes>
+   <Route path="/" element={<Navbar/>}/>
+   <Route path="/profile" element={<Profile/>}/>
+  </Routes>
     </UserContextProvider>
   
     </>
