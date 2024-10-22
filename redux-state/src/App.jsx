@@ -1,31 +1,19 @@
 import { useState } from 'react'
-import './App.css'
-
-
+import { useDispatch, useSelector } from 'react-redux'
+import { increment , decrement} from './features/counter/counterSlice'
 
 
 function App() {
 
-let count=1;
-  const increment = 
-  {
-    type: 'counter/incremented',
-    payload: 'incremented value'
-  }
-
-function incrementValue(count,action)
-{
-if(action.type==='counter/increment'){
-  count=count+1;
-  console.log(action.payload);
-}
-}
+const count = useSelector((state)=>state.counter.value)
+const dispatch = useDispatch()
 
   return (
     <>
     <h1>State Management</h1>
-    <button onClick={incrementValue(count,increment)}>+</button>
-    <h2>Counter value : {count}</h2>
+    <h2>Counter value : {count} </h2>
+    <button onClick={()=>dispatch(increment())}>+</button>
+    <button onClick={()=>dispatch(decrement())}>-</button>
     </>
   )
 }
